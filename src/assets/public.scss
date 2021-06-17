@@ -1,0 +1,65 @@
+$back-blueLightColor:#1a1e3c;
+$back-blueColor:#11142b;
+$back-blackColor:rgba(0, 0, 0, 0.3);
+$prominent-content-color: #ffffff;
+$content-color: hsla(0, 0%, 100%, 0.6);
+$icon-hoverColor:#8c8dfc;
+$main-width:899px;
+$main-widthH5:calc(100% - 40px);
+$min-width:1000px;
+@mixin column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin first-title{
+   color: #fff;
+   font-size: 40px;
+   line-height: 48px;
+   font-weight: 600;
+}
+@mixin first-titleH5{
+    width: $main-widthH5;
+    color: #fff;
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 600;
+ }
+
+@mixin prominent-content{
+    color: $prominent-content-color !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+@mixin prominent-contentH5{
+    color: $prominent-content-color !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+@mixin content{
+    color: $content-color;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    text-align: center;
+}
+@mixin contentH5{
+    color: $content-color;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    text-align: left;
+}
+@keyframes leftOpacity {
+    from {position: relative; left: -50px;opacity: 0;}
+    to {position: relative;left: 0px;opacity: 1;}
+  }
+@mixin comeInLeft{
+    opacity: 0;
+    animation:leftOpacity;
+    animation-fill-mode:forwards;
+    animation-timing-function: ease;
+}
+
